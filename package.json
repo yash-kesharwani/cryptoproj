@@ -1,0 +1,22 @@
+{
+  "name": "cryptoproj",
+  "version": "1.0.0",
+  "description": "crypto project with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yash-kesharwani/cryptoproj/"
+  },
+  "author": "yash kesharwani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yash-kesharwani/cryptoproj/issues"
+  },
+  "homepage": "https://github.com/yash-kesharwani/cryptoproj#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
