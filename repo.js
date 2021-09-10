@@ -9,19 +9,14 @@ const csv = require('csv-parser');
 async function getCsvData(time) { 
     const val = new Map();
     const inputFilePath = "sample.csv"
-
-    if(time == NaN) 
-        time = 999999999
-    else
-        time = Number(time)
-
+    
     const chk = new Promise((resolve,reject)=>{
 
         fs.createReadStream(inputFilePath)
         .pipe(csv())
         .on('data', function(data){
             try {
-                if(Number(data.timestamp) < time){
+                if(Number(data.timestamp) <=time){
                     if(!val.get(data.token))
                         val.set(data.token, 0)
 
@@ -42,7 +37,6 @@ async function getCsvData(time) {
             resolve(val);
         });
     });
-    
     return Promise.resolve(chk);
 }    
 

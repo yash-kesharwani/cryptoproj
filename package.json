@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/yash-kesharwani/cryptoproj#readme",
   "dependencies": {
+    "axios": "^0.21.4",
     "csv-parser": "^3.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "yargs": "^17.1.1"
   }
 }
