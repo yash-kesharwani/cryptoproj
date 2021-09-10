@@ -1,6 +1,6 @@
-const repo = require("./repo.js")
-const price = require("./price.js")
-const utils = require("./utils.js")
+const repo = require("./scripts/repo.js")
+const price = require("./scripts/price.js")
+const utils = require("./scripts/utils.js")
 const yargs = require('yargs')
 
 yargs.options({
@@ -18,7 +18,6 @@ async function getPortfolioAmt(time, token){
     if(!isNaN(time)){
         type ="2";
     }
-    //console.log(inputs)
     
     amt= await repo.getCsvData(inputs[0])
    
@@ -26,8 +25,6 @@ async function getPortfolioAmt(time, token){
     rate= await price.fetchPrice(tokenArray, type, inputs[0]);
     
     portfolio = utils.getPortfolio(amt, rate);
-
-    // console.log("portfolio: "+portfolio);
     
     if(inputs[1] !='' && tokenArray.indexOf(inputs[1])>-1){
         console.log(inputs[1]+" : "+portfolio.get(inputs[1]));

@@ -8,7 +8,7 @@ const csv = require('csv-parser');
 
 async function getCsvData(time) { 
     const val = new Map();
-    const inputFilePath = "sample.csv"
+    const inputFilePath = "./resources/sample.csv"
     
     const chk = new Promise((resolve,reject)=>{
 
